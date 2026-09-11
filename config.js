@@ -5,30 +5,111 @@
 
 const STORE_CONFIG = {
   "PRODUCTS": {
-    "1789057980512": {
+    "1789153584975": {
       "name": "Ensemble POLO",
-      "price": 58455,
-      "description": "",
+      "price": 4000,
+      "description": "منتج عال الجودة ",
       "category": "",
       "stock": 0,
       "featured": false,
       "availableColors": [
-        "أسود"
+        "Olive Green-black",
+        "Black-olive Geen",
+        "Beige - Black",
+        "Gray-black"
       ],
       "availableSizes": [
-        "S"
+        "M",
+        "L",
+        "XL"
       ],
       "ageRanges": [],
       "colorImages": {
-        "أسود": {
+        "Olive Green-black": {
           "images": [
-            "https://raw.githubusercontent.com/one-wil/hassoun/main/images/product-1789057980512-أسود-1789058101896-Screenshot-20260909-094634-Samsung-Browser.jpg"
+            "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789153584975-Olive%20Green-black-1789153906426-Screenshot-20260911-200924-Gallery.jpg"
           ],
           "ageRanges": [
             {
               "ageFrom": " ",
               "ageTo": " ",
-              "size": "S"
+              "size": "M"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "L"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "XL"
+            }
+          ]
+        },
+        "Black-olive Geen": {
+          "images": [
+            "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789153584975-Black-olive%20Geen-1789153960462-Screenshot-20260911-200839-Gallery.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "M"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "L"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "XL"
+            }
+          ]
+        },
+        "Beige - Black": {
+          "images": [
+            "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789153584975-Beige%20-%20Black-1789154037156-Screenshot-20260911-200854-Gallery.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "M"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "L"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "XL"
+            }
+          ]
+        },
+        "Gray-black": {
+          "images": [
+            "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789153584975-Gray-black-1789154086091-Screenshot-20260911-200909-Gallery.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "M"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "L"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "XL"
             }
           ]
         }
@@ -37,9 +118,9 @@ const STORE_CONFIG = {
         "enabled": false,
         "guide": {}
       },
-      "createdAt": "2026-09-10T16:33:00.513Z",
-      "image": "https://raw.githubusercontent.com/one-wil/hassoun/main/images/product-1789057980512-1789058061546-Screenshot-20260907-204806-Samsung-Browser.jpg",
-      "updatedAt": "2026-09-10T16:34:45.655Z"
+      "createdAt": "2026-09-11T19:06:24.975Z",
+      "image": "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789153584975-1789153831081-Screenshot-20260911-200854-Gallery.jpg",
+      "updatedAt": "2026-09-11T19:15:36.851Z"
     }
   },
   "PRODUCT_ORDER": {},
@@ -279,7 +360,7 @@ const STORE_CONFIG = {
   },
   "FREE_DELIVERY": {
     "desk": {
-      "enabled": false,
+      "enabled": true,
       "minAmount": 0,
       "wilayas": [],
       "minQuantity": 1
@@ -293,7 +374,8 @@ const STORE_CONFIG = {
     "freeDeliveryProducts": [
       1765137505304,
       1765145035052,
-      1765145814607
+      1765145814607,
+      1789153584975
     ]
   },
   "DISCOUNTS": {
@@ -309,18 +391,21 @@ const STORE_CONFIG = {
     "promoDiscountProducts": []
   },
   "STORE_INFO": {
-    "name": "Hassoun",
+    "name": "Lip-waw",
     "storeIcon": "-",
     "storeTitle": "-",
     "tagline": "",
-    "phoneNumbers": [],
+    "phoneNumbers": [
+      "0671466489",
+      "0551102155"
+    ],
     "logo": "",
     "facebookUrl": "",
     "instagramUrl": "",
     "messengerUrl": "",
     "viberNumber": "",
-    "whatsappNumber": "",
-    "whatsappUrl": ""
+    "whatsappNumber": "0671466489",
+    "whatsappUrl": "https://wa.me/0671466489"
   },
   "GOOGLE_SHEETS": {
     "url": "",
