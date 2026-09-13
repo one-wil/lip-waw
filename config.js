@@ -123,7 +123,9 @@ const STORE_CONFIG = {
       "updatedAt": "2026-09-11T19:15:36.851Z"
     }
   },
-  "PRODUCT_ORDER": {},
+  "PRODUCT_ORDER": {
+    "1789153584975": 1
+  },
   "DELIVERY_PRICES": {
     "01 - أدرار": {
       "home": 1100,
@@ -366,10 +368,10 @@ const STORE_CONFIG = {
       "minQuantity": 1
     },
     "home": {
-      "enabled": false,
+      "enabled": true,
       "minAmount": 0,
       "wilayas": [],
-      "minQuantity": 1
+      "minQuantity": 3
     },
     "freeDeliveryProducts": [
       1765137505304,
