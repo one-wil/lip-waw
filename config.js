@@ -141,7 +141,7 @@ const STORE_CONFIG = {
       "colorImages": {
         "أزرق": {
           "images": [
-            "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789373212586-أزرق-1789389981990-modal3.jpg"
+            "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789373212586-أزرق-1789392702912-modal4.jpg"
           ],
           "ageRanges": [
             {
@@ -158,7 +158,7 @@ const STORE_CONFIG = {
         },
         "أحمر": {
           "images": [
-            "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789373212586-أحمر-1789390020463-modal4.jpg"
+            "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789373212586-أحمر-1789392677532-modal3.jpg"
           ],
           "ageRanges": [
             {
