@@ -116,6 +116,79 @@
       "createdAt": "2026-09-11T19:06:24.975Z",
       "image": "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789153584975-1789153831081-Screenshot-20260911-200854-Gallery.jpg",
       "updatedAt": "2026-09-11T19:15:36.851Z"
+    },
+    "1789373212586": {
+      "name": "لباس اطفال",
+      "price": 3200,
+      "description": "لباس تركي دو جودة  عالية .",
+      "category": "",
+      "stock": 0,
+      "featured": false,
+      "availableColors": [
+        "أحمر",
+        "أزرق"
+      ],
+      "availableSizes": [
+        "S",
+        "M"
+      ],
+      "ageRanges": [],
+      "colorImages": {
+        "أحمر": {
+          "images": [
+            "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789373212586-أحمر-1789373353778-modal3.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "S"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "M"
+            }
+          ]
+        },
+        "أزرق": {
+          "images": [
+            "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789373212586-أزرق-1789373390659-modal4.jpg"
+          ],
+          "ageRanges": [
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "S"
+            },
+            {
+              "ageFrom": " ",
+              "ageTo": " ",
+              "size": "M"
+            }
+          ]
+        }
+      },
+      "sizeGuide": {
+        "enabled": true,
+        "guide": {
+          "S": {
+            "heightFrom": 80,
+            "heightTo": 100,
+            "weightFrom": 12,
+            "weightTo": 14
+          },
+          "M": {
+            "heightFrom": 100,
+            "heightTo": 120,
+            "weightFrom": 14,
+            "weightTo": 16
+          }
+        }
+      },
+      "createdAt": "2026-09-14T08:06:52.587Z",
+      "image": "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789373212586-1789373291271-modal4.jpg",
+      "updatedAt": "2026-09-14T08:09:04.738Z"
     }
   },
   "PRODUCT_ORDER": {
