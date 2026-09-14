@@ -125,7 +125,6 @@
       "stock": 0,
       "featured": false,
       "availableColors": [
-        "أحمر",
         "أزرق"
       ],
       "availableSizes": [
@@ -188,7 +187,7 @@
       },
       "createdAt": "2026-09-14T08:06:52.587Z",
       "image": "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789373212586-1789373291271-modal4.jpg",
-      "updatedAt": "2026-09-14T12:47:11.544Z"
+      "updatedAt": "2026-09-14T14:13:41.869Z"
     }
   },
   "PRODUCT_ORDER": {
