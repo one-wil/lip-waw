@@ -134,9 +134,9 @@
       ],
       "ageRanges": [],
       "colorImages": {
-        "أحمر": {
+        "أزرق": {
           "images": [
-            "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789373212586-أحمر-1789373353778-modal3.jpg"
+            "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789373212586-أزرق-1789389981990-modal3.jpg"
           ],
           "ageRanges": [
             {
@@ -151,9 +151,9 @@
             }
           ]
         },
-        "أزرق": {
+        "أحمر": {
           "images": [
-            "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789373212586-أزرق-1789373390659-modal4.jpg"
+            "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789373212586-أحمر-1789390020463-modal4.jpg"
           ],
           "ageRanges": [
             {
@@ -188,7 +188,7 @@
       },
       "createdAt": "2026-09-14T08:06:52.587Z",
       "image": "https://raw.githubusercontent.com/one-wil/lip-waw/main/images/product-1789373212586-1789373291271-modal4.jpg",
-      "updatedAt": "2026-09-14T08:09:04.738Z"
+      "updatedAt": "2026-09-14T12:47:11.544Z"
     }
   },
   "PRODUCT_ORDER": {
