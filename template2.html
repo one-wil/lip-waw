@@ -8056,7 +8056,7 @@
         function updateStoreInterface() {
             if (STORE_CONFIG.STORE_INFO && STORE_CONFIG.STORE_INFO.name) {
                 const storeName = STORE_CONFIG.STORE_INFO.name;
-                const storeTagline = STORE_CONFIG.STORE_INFO.tagline || '"tagline"';
+                const storeTagline = STORE_CONFIG.STORE_INFO.tagline || '';
                 
                 document.getElementById('storeNameHeader').textContent = storeName;
                 document.getElementById('storeTitleText').textContent = storeTagline;
