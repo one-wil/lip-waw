@@ -1076,8 +1076,8 @@ const STORE_CONFIG = {
     },
     "STORE_INFO": {
       "name": "",
-      "storeIcon": "👑",
-      "storeTitle": "👑 أحدث موديلات ",
+      "storeIcon": "",
+      "storeTitle": " أحدث موديلات ",
       "tagline": "متجر أفخم الملابس",
       "phoneNumbers": [
         "0xxxxxxxxx",
