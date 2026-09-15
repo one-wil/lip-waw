@@ -5119,7 +5119,10 @@
                             </div>
                             <div class="selected-products smart-selected-products" id="selectedProducts">
                                 <div class="premium-empty-cart">
-                                    <div class="empty-cart-icon"><i class="fas fa-shopping-bag"></i></div>
+                                   <div class="logo" id="headerLogo">
+    <i class="fas fa-shopping-bag"></i>
+    <span id="storeNameText"></span> <!-- تركناه فارغاً ليتم ملؤه من كود الجافاسكريبت -->
+</div>
                                     <h3>السلة فارغة</h3><p>أضف منتجًا أولاً ثم عد لإتمام الطلب.</p>
                                     <button type="button" class="btn btn-primary continue-shopping-btn" onclick="switchPage('page1'); window.scrollTo({top:0,behavior:'smooth'});"><i class="fas fa-store"></i> العودة للتسوق</button>
                                 </div>
@@ -5341,6 +5344,24 @@
     </footer>
 
     <!-- JavaScript with New Effects -->
+    document.addEventListener('DOMContentLoaded', function() {
+    // جلب الاسم المحدد في ADM من ملف config.js
+    const storeName = STORE_CONFIG.STORE_NAME || "أحدث الموديلات";
+    
+    // 1. تحديث نص المتجر في الهيدر
+    const storeNameElement = document.getElementById('storeNameText');
+    if (storeNameElement) {
+        storeNameElement.textContent = storeName;
+    }
+    
+    // 2. تحديث عنوان الصفحة في المتصفح
+    const pageTitle = document.getElementById('pageTitle');
+    if (pageTitle) {
+        pageTitle.textContent = "🛒 " + storeName;
+    }
+});
+
+    
     <script>
         // ===== Global Variables =====
         
