@@ -1,0 +1,124 @@
+name: Build StoreMaster APK V12 Height75 Image Picker + External Links Fix
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build StoreMaster V12 Height75 External Links Fix
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Android SDK
+        run: |
+          yes | sdkmanager --licenses || true
+          sdkmanager "platform-tools"
+          sdkmanager "platforms;android-36"
+          sdkmanager "build-tools;36.0.0"
+
+      - name: Extract StoreMaster V12 Height75
+        run: |
+          rm -rf project
+          mkdir -p project
+
+          ZIP_FILE="StoreMaster-ADM-V12-Height75-IMAGE-PICKER-EXTERNAL-LINKS-FIX.zip"
+
+          if [ ! -f "$ZIP_FILE" ]; then
+            echo "ERROR: ZIP file not found: $ZIP_FILE"
+            echo "Files in repository:"
+            ls -lah
+            exit 1
+          fi
+
+          echo "ZIP found:"
+          ls -lh "$ZIP_FILE"
+
+          unzip -o "$ZIP_FILE" -d project
+
+          echo "===== PROJECT FILES ====="
+          find project -maxdepth 6 -type f | sort
+
+      - name: Locate Android project
+        run: |
+          SETTINGS_FILE=$(find project -type f \
+            \( -name "settings.gradle" -o -name "settings.gradle.kts" \) \
+            -print -quit)
+
+          if [ -z "$SETTINGS_FILE" ]; then
+            echo "ERROR: settings.gradle not found."
+            exit 1
+          fi
+
+          PROJECT_DIR=$(dirname "$SETTINGS_FILE")
+          echo "PROJECT_DIR=$PROJECT_DIR" >> "$GITHUB_ENV"
+          echo "Android project found: $PROJECT_DIR"
+
+      - name: Verify Android project
+        run: |
+          test -f "$PROJECT_DIR/settings.gradle" \
+            || test -f "$PROJECT_DIR/settings.gradle.kts"
+          test -f "$PROJECT_DIR/build.gradle" \
+            || test -f "$PROJECT_DIR/build.gradle.kts"
+          test -f "$PROJECT_DIR/app/build.gradle" \
+            || test -f "$PROJECT_DIR/app/build.gradle.kts"
+          test -f "$PROJECT_DIR/app/src/main/AndroidManifest.xml"
+          test -f "$PROJECT_DIR/app/src/main/java/com/storemaster/adm/MainActivity.java"
+          test -f "$PROJECT_DIR/app/src/main/assets/adm.html"
+          echo "Android project verification: OK"
+
+      - name: Verify image picker fix
+        run: |
+          grep -q "WebChromeClient" "$PROJECT_DIR/app/src/main/java/com/storemaster/adm/MainActivity.java"
+          grep -q "onShowFileChooser" "$PROJECT_DIR/app/src/main/java/com/storemaster/adm/MainActivity.java"
+          grep -q "ACTION_OPEN_DOCUMENT" "$PROJECT_DIR/app/src/main/java/com/storemaster/adm/MainActivity.java"
+          grep -q "onActivityResult" "$PROJECT_DIR/app/src/main/java/com/storemaster/adm/MainActivity.java"
+          echo "Image picker fix verification: OK"
+
+      - name: Verify external link fix
+        run: |
+          grep -q "shouldOverrideUrlLoading" "$PROJECT_DIR/app/src/main/java/com/storemaster/adm/MainActivity.java"
+          grep -q "ACTION_DIAL" "$PROJECT_DIR/app/src/main/java/com/storemaster/adm/MainActivity.java"
+          grep -q "whatsapp" "$PROJECT_DIR/app/src/main/java/com/storemaster/adm/MainActivity.java"
+          grep -q "isSocialHost" "$PROJECT_DIR/app/src/main/java/com/storemaster/adm/MainActivity.java"
+          echo "External link fix verification: OK"
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Build StoreMaster APK
+        run: |
+          cd "$PROJECT_DIR"
+          gradle assembleDebug --stacktrace
+
+      - name: Find generated APK
+        run: |
+          echo "===== GENERATED APK ====="
+          find "$PROJECT_DIR" \
+            -type f \
+            -path "*/build/outputs/apk/debug/*.apk" \
+            -print
+
+      - name: Upload StoreMaster APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: StoreMaster-ADM-APK-V12-Height75-ImagePicker-ExternalLinks-Fix
+          path: |
+            project/**/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
