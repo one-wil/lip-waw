@@ -470,9 +470,7 @@ const STORE_CONFIG = {
     "name": "Lip-waw",
     "storeIcon": "-",
     "storeTitle": "-",
-    "tagline": "const storeTagline = STORE_CONFIG.STORE_INFO.tagline 
-  || DEFAULT_CONFIG.STORE_INFO.tagline 
-  || '';",
+    "tagline": "",
     "phoneNumbers": [
       "0671466489",
       "0551102155"
@@ -1080,7 +1078,7 @@ const STORE_CONFIG = {
       "name": "",
       "storeIcon": "",
       "storeTitle": " أحدث موديلات ",
-      "tagline": "",
+      "tagline": "متجر أفخم الملابس",
       "phoneNumbers": [
         "0xxxxxxxxx",
         "0xxxxxxxxx"
